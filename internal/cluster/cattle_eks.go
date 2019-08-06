@@ -14,8 +14,7 @@ import (
 	//"github.com/spf13/viper"
 )
 
-func cattleEKSPrepareConfigFiles(InstanceOS string, Name string) {
-	fmt.Println(InstanceOS)
+func cattleEKSPrepareConfigFiles(Name string) {
 	templates.ParseTemplate(templates.VariablesCattleEKS, "./inventory/"+common.Name+"/provisioner/variables.tf", GetCattleEKSConfig())
 }
 
@@ -30,7 +29,7 @@ func Install() {
 	if err != nil {
 		fmt.Printf("The copy operation failed %q\n", err)
 	}
-
+	cattleEKSPrepareConfigFiles(common.Name)
 	// Check if a terraform state file already exists
 	if _, err := os.Stat("./inventory/" + common.Name + "/provisioner/terraform.tfstate"); err == nil {
 		log.Fatal("There is an existing cluster, please remove terraform.tfstate file or delete the installation before proceeding")
