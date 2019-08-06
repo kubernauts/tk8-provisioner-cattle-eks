@@ -31,7 +31,7 @@ variable "minimum_nodes" {
 }
 
 variable "instance_type" {
-  default     = "{{.InstanceType}}
+  default     = "{{.InstanceType}}"
   description = "Instance type for worker nodes"
   type        = string
 }
