@@ -1,0 +1,22 @@
+cattle-eks:
+   rancher_cluster_name: "tk8-tpr2-eks"
+   rancher_api_url: "https://rancher.xyz.com/v3"
+   rancher_access_key:
+   rancher_secret_key:
+   region: "eu-central-1"
+   existing_vpc: false
+   vpc_id:
+   subnets:
+      subnet_id1:
+      subnet_id2:
+      subnet_id3:
+   security_group_name:
+   disk_size: "20"
+   ami_id: "ami-00a91197f921a229e"
+   kubernetes_version: "1.12"
+   maximum_nodes: 3
+   minimum_nodes: 1
+   session_token:
+   instance_type: "t2.medium"
+   associate_worker_node_public_ip: true
+   service_role:
