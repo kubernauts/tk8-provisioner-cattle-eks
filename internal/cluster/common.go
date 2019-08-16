@@ -17,8 +17,6 @@ type AwsCredentials struct {
 type CattleEKSConfig struct {
 	RancherClusterName string
 	RancherApiUrl      string
-	RancherAccessKey   string
-	RancherSecretKey   string
 	Region             string
 	ExistingVpc        bool
 	VpcId              string
@@ -42,8 +40,6 @@ func GetCattleEKSConfig() CattleEKSConfig {
 	return CattleEKSConfig{
 		RancherClusterName: viper.GetString("cattle-eks.rancher_cluster_name"),
 		RancherApiUrl:      viper.GetString("cattle-eks.rancher_api_url"),
-		RancherAccessKey:   viper.GetString("cattle-eks.rancher_access_key"),
-		RancherSecretKey:   viper.GetString("cattle-eks.rancher_secret_key"),
 		Region:             viper.GetString("cattle-eks.region"),
 		ExistingVpc:        viper.GetBool("cattle-eks.existing_vpc"),
 		VpcId:              viper.GetString("cattle-eks.vpc_id"),

@@ -12,7 +12,7 @@ The initial release of the provisioner requires the following things to be ready
 
 * A Rancher server installation.
 * Rancher API URL
-* Rancher API keys: `access_key` and `secret_key`. Create them from the Rancher GUI.
+* Rancher token key. Create them from the Rancher GUI.
 * AWS access key and secret key.
 * Terraform 0.12
 
@@ -38,8 +38,6 @@ Example `config.yaml`:
 cattle-eks:
   rancher_cluster_name: "tk8-tpr2-eks"
   rancher_api_url: "https://rancher.xyz.com/v3"
-  rancher_access_key:
-  rancher_secret_key:
   region: "eu-central-1"
   existing_vpc: false
   vpc_id:

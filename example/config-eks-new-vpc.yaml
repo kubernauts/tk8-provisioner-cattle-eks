@@ -1,8 +1,6 @@
 cattle-eks:
    rancher_cluster_name: "tk8-tpr2-eks"
    rancher_api_url: "https://rancher.xyz.com/v3"
-   rancher_access_key:
-   rancher_secret_key:
    region: "eu-central-1"
    existing_vpc: false
    vpc_id:
