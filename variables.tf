@@ -1,3 +1,8 @@
+variable "TOKEN_KEY" {
+  description = "Rancher token key"
+  type        = string
+}
+
 variable "service_role" {
   default     = ""
   description = "Service linked role for EKS"
@@ -55,14 +60,6 @@ variable "rancher_api_url" {
   default     = ""
   description = "Rancher API URL"
   type        = string
-}
-
-variable "rancher_access_key" {
-  description = "Rancher server's access key"
-}
-
-variable "rancher_secret_key" {
-  description = "Rancher server's secret key"
 }
 
 variable "rancher_cluster_name" {

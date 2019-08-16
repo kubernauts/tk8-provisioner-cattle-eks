@@ -1,30 +1,35 @@
+variable "TOKEN_KEY" {
+  description = "Rancher token key"
+  type        = string
+}
+
 variable "service_role" {
   description = "Service linked role for EKS"
-  type = string
+  type        = string
 }
 
 variable "associate_worker_node_public_ip" {
   description = "Associate public IP with worker nodes"
-  type = string
+  type        = string
 }
 
 variable "kubernetes_version" {
   description = "Kubernetes version"
-  type = string
+  type        = string
 }
 variable "maximum_nodes" {
   description = "Maximum worker nodes"
-  type = string
+  type        = string
 }
 
 variable "minimum_nodes" {
   description = "Minimum size for worker nodes"
-  type = string
+  type        = string
 }
 
 variable "instance_type" {
   description = "Instance type for worker nodes"
-  type = string
+  type        = string
 }
 
 variable "ami_id" {
@@ -34,7 +39,7 @@ variable "ami_id" {
 
 variable "session_token" {
   description = "Session token to use with the client key and secret key if applicable"
-  type = string
+  type        = string
 }
 
 variable "disk_size" {
@@ -45,14 +50,6 @@ variable "disk_size" {
 variable "rancher_api_url" {
   description = "Rancher API URL"
   type        = string
-}
-
-variable "rancher_access_key" {
-  description = "Rancher server's access key"
-}
-
-variable "rancher_secret_key" {
-  description = "Rancher server's secret key"
 }
 
 variable "rancher_cluster_name" {
@@ -83,15 +80,15 @@ variable "subnet_id1" {
 }
 
 variable "subnet_id2" {
-  default = ""
+  default     = ""
   description = "Subnet Id 2"
-  type = string
+  type        = string
 }
 
 variable "subnet_id3" {
-  default = ""
+  default     = ""
   description = "Subnet Id 3"
-  type = string
+  type        = string
 }
 
 

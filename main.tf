@@ -2,8 +2,6 @@
 module "cattle-eks-existing-vpc" {
   source                          = "./modules/cattle-eks-existing-vpc"
   rancher_api_url                 = var.rancher_api_url
-  rancher_access_key              = var.rancher_access_key
-  rancher_secret_key              = var.rancher_secret_key
   rancher_cluster_name            = var.rancher_cluster_name
   region                          = var.region
   service_role                    = var.service_role
@@ -24,14 +22,13 @@ module "cattle-eks-existing-vpc" {
   maximum_nodes                   = var.maximum_nodes
   minimum_nodes                   = var.minimum_nodes
   session_token                   = var.session_token
+  TOKEN_KEY                       = var.TOKEN_KEY
 
 }
 
 module "cattle-eks-new-vpc" {
   source                          = "./modules/cattle-eks-new-vpc"
   rancher_api_url                 = var.rancher_api_url
-  rancher_access_key              = var.rancher_access_key
-  rancher_secret_key              = var.rancher_secret_key
   rancher_cluster_name            = var.rancher_cluster_name
   region                          = var.region
   service_role                    = var.service_role
@@ -52,5 +49,6 @@ module "cattle-eks-new-vpc" {
   maximum_nodes                   = var.maximum_nodes
   minimum_nodes                   = var.minimum_nodes
   session_token                   = var.session_token
+  TOKEN_KEY                       = var.TOKEN_KEY
 
 }

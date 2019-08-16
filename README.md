@@ -20,8 +20,7 @@ The initial release of the provisioner requires the following things to be ready
 
 The following environment variables need to be set up:
 
-* `TF_VAR_rancher_access_key` - Rancher access key
-* `TF_VAR_rancher_secret_key` - Rancher secret key
+* `TF_VAR_TOKEN_KEY` - Rancher token key
 * `TF_VAR_AWS_ACCESS_KEY_ID` - AWS access key
 * `TF_VAR_AWS_SECRET_ACCESS_KEY` - AWS secret key
 * `TF_VAR_AWS_DEFAULT_REGION` - AWS default region
@@ -68,8 +67,6 @@ Example `config.yaml`:
 cattle-eks:
   rancher_cluster_name: "tk8-tpr2-eks"
   rancher_api_url: "https://rancher.xyz.com/v3"
-  rancher_access_key:
-  rancher_secret_key:
   region: "eu-central-1"
   existing_vpc: false
   vpc_id: "my-vpc-id"
@@ -102,10 +99,6 @@ cattle-eks:
 * `rancher_cluster_name`: EKS cluster name.
 
 * `rancher_api_url`: The API URL for rancher server.
-
-* `rancher_access_key`: Rancher access key. DO NOT specify it here. This is mentioned here because the user needs to know that it is required. You are supposed to set this via environment variable `TF_VAR_rancher_access_key`.
-
-* `rancher_secret_key`: Rancher secret key. §This is mentioned here because it is required. You are supposed to set this via environment variable `TF_VAR_rancher_secret_key`.
 
 * `region`: (Mandatory) The AWS region in which you want to deploy the cluster.
 
