@@ -13,11 +13,12 @@ provider "rancher2" {
   secret_key = var.rancher_secret_key
 }
 
-#resource "rancher2_cloud_credential" "test" {
-#  name = "test-${random_string.rancher_cloud_cred_random.result}"
-#
-#  amazonec2_credential_config {
-#    access_key = var.AWS_ACCESS_KEY_ID
-#    secret_key = var.AWS_SECRET_ACCESS_KEY
-#  }
-#}
+resource "rancher2_cloud_credential" "test" {
+  count            = var.existing_vpc ? 0 : 1
+  name = "cc-${random_string.rancher_cloud_cred_random[count.index].result}"
+
+  amazonec2_credential_config {
+    access_key = var.AWS_ACCESS_KEY_ID
+    secret_key = var.AWS_SECRET_ACCESS_KEY
+  }
+}
