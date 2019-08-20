@@ -91,7 +91,7 @@ cattle-eks:
 3. Use a `config.yaml` from the above example.
 4. Run `tk8 cluster install cattle-eks`.
 
-## Field Reference:
+## Field Reference
 * `disk_size`: Disk size for the instances.
 
 * `rancher_cluster_name`: EKS cluster name.
@@ -112,7 +112,7 @@ cattle-eks:
 
 * `security_group_name`: (Optional) Security group name. Specify if you want to create the cluster in existing VPC.
 
-* `ami_id`: (Mandatory). Set this field if you want to use a specific AMI ID for creating instances in the cluster. It normally makes sense to keep `os` field empty while using this.
+* `ami_id`: (Mandatory). Set this field to specify AMI ID for creating instances in the cluster.
 
 * `kubernetes_version`: (Mandatory) The Kubernetes version to be used for creating EKS cluster.
 
