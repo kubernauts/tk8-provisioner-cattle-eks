@@ -57,6 +57,10 @@ cattle-eks:
   service_role:
 ```
 
+N.B.: Choose the right Ubuntu EC2 AMI for your region from this list:
+
+https://cloud-images.ubuntu.com/aws-eks/
+
 * Creating an EKS cluster in existing VPC:
 
 Example `config.yaml`:
