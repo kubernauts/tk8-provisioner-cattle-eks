@@ -47,8 +47,8 @@ cattle-eks:
     subnet_id3:
   security_group_name:
   disk_size: "20"
-  ami_id: "ami-00a91197f921a229e"
   kubernetes_version: "1.12"
+  ami_id: "ami-058487fd109552697"
   maximum_nodes: 3
   minimum_nodes: 1
   session_token:
@@ -74,8 +74,8 @@ cattle-eks:
     subnet_id3: "subnet-id-3"
   security_group_name: "my-security-group"
   disk_size: "20"
-  ami_id: "ami-00a91197f921a229e"
   kubernetes_version: "1.12"
+  ami_id: "ami-058487fd109552697"
   maximum_nodes: 3
   minimum_nodes: 1
   session_token:
